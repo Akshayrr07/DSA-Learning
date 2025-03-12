@@ -1,0 +1,6 @@
+Full stack devloper
+    FRONTEND - UI and ux    #front end developer
+    BACKEND - funxtionality for the devlopement     #backend developer
+    DevOPS - Entire cyle of the Developement of the applications (CI - continous integration and CD - continous development)    #devops engineer
+
+#Agile devlopement  #Git #svn 
