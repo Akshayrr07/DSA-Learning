@@ -1,5 +1,9 @@
 DAY 1
 Kickoff And Coding
+
+FORENOON
+    Loops and loping concepts including for and while Loops
+    Loops based problem solving
 DAY 2
 DSA array linked list
 DAY 3
