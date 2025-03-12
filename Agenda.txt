@@ -1,0 +1,20 @@
+DAY 1
+Kickoff And Coding
+DAY 2
+DSA array linked list
+DAY 3
+Stacks and queues
+DAY 4
+Binary trees and search
+DAY 5 
+Graphs
+DAY 6
+Two pointers and divide and conquer
+DAY 7
+Backtracking and time complexity analysis
+Day 8
+Greedy approach and Dynamic programming
+Day 9
+Dynamic programming and practice and assessment
+DAY 10
+Hiring 
