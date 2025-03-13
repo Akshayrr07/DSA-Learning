@@ -1,0 +1,23 @@
+Linked list
+    Definition
+        A linked list is a linear data structure where each element is a separate object, called a node. 
+        Each node contains two items: the data and a reference (or link) to the next node in the sequence. 
+        This structure allows for efficient insertion and deletion of elements.
+
+    Types of linked lists
+        1. Singly Linked List
+            - Each node contains a single link to the next node.
+        2. Doubly Linked List
+            - Each node contains two links: one to the next node and another to the previous node.
+        3. Circular Linked List
+            - The last node in the list points back to the first node, forming a circle.
+
+    Properties
+        - Dynamic size: The size of a linked list can grow or shrink as needed.
+        - Ease of insertion/deletion: Elements can be easily inserted or removed without reorganizing the entire structure.
+        - Sequential access: Elements must be accessed sequentially starting from the head node.
+
+    Disadvantages
+        - Memory usage: Each node requires extra memory for storing the reference to the next node.
+        - No random access: Elements cannot be accessed directly by index; traversal is required.
+        - Complexity: Operations such as searching for an element can be slower compared to arrays due to the need for traversal.

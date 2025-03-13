@@ -18,3 +18,26 @@ Arrays
         - Fixed size: The size of an array cannot be changed once it is created, which can lead to wasted memory or insufficient space.
         - Insertion and deletion: Inserting or deleting elements can be inefficient, as it may require shifting elements.
         - Homogeneous elements: Arrays can only store elements of the same data type, which can be limiting in some cases.
+
+    Types of Arrays
+        - One-dimensional array: A linear array where elements are stored in a single row.
+        - Multi-dimensional array: An array of arrays, where elements are stored in a grid or matrix format.
+            - Two-dimensional array: Elements are stored in a table with rows and columns.
+            - Three-dimensional array: Elements are stored in a 3D grid.
+
+1D Arrays
+    Definition
+        A one-dimensional array, also known as a linear array, is a list of elements that are stored in a single row.
+    
+    Application
+        - Storing a list of items such as numbers, characters, or objects.
+        - Used in algorithms that require a linear data structure, such as searching and sorting.
+        - Useful in scenarios where fixed-size collections of elements are needed.
+
+    Example Problems
+        - Finding the maximum or minimum element in an array.
+        - Sorting the elements of an array in ascending or descending order.
+        - Merging two arrays into one.
+        - Removing duplicates from an array.
+        - Rotating an array to the left or right.
+        - Finding the sum of all elements in an array.
