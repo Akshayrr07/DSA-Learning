@@ -1,0 +1,35 @@
+Data Structures
+    ├── **Primitive**
+    │   ├── **int**
+    │   │   └── Definition: Represents integer values.
+    │   │       Example: 1, 2, 3, -1, -2, -3
+    │   ├── **float**
+    │   │   └── Definition: Represents floating-point numbers.
+    │   │       Example: 1.23, 3.14, -0.001
+    │   ├── **char**
+    │   │   └── Definition: Represents single characters.
+    │   │       Example: 'a', 'b', '1', '$'
+    │   └── **double**
+    │       └── Definition: Represents double-precision floating-point numbers.
+    │           Example: 1.234567, 3.1415926535
+    └── **Non-Primitive**
+        ├── **Linear**
+        │   ├── **Array**
+        │   │   └── Definition: A collection of elements identified by index or key.
+        │   │       Example: [1, 2, 3, 4]
+        │   ├── **Linked List**
+        │   │   └── Definition: A linear collection of data elements, called nodes, where the linear order is not given by their physical placement in memory.
+        │   │       Example: 1 -> 2 -> 3 -> 4
+        │   ├── **Stacks**
+        │   │   └── Definition: A collection of elements with two principal operations: push (add an element to the top) and pop (remove the top element).
+        │   │       Example: Stack of plates
+        │   └── **Queue**
+        │       └── Definition: A collection of elements supporting two principal operations: enqueue (add an element to the end) and dequeue (remove the front element).
+        │           Example: Queue of people in line
+        └── **Non-Linear**
+            ├── **Graphs**
+            │   └── Definition: A collection of nodes connected by edges.
+            │       Example: Social network connections
+            └── **Trees**
+                └── Definition: A hierarchical structure with a root node and child nodes, forming a parent-child relationship.
+                    Example: File system directory structure

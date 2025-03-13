@@ -1,0 +1,20 @@
+Arrays
+    Definition
+        An array is a data structure that can hold a fixed number of elements of the same data type. 
+        The elements are stored in contiguous memory locations.
+
+    Properties
+        - Fixed size: The size of an array is determined at the time of creation and cannot be changed.
+        - Homogeneous elements: All elements in an array are of the same data type.
+        - Indexed: Each element in an array is identified by an index, starting from 0.
+        - Contiguous memory allocation: Elements are stored in consecutive memory locations.
+
+    Advantages
+        - Fast access: Elements can be accessed directly using their index, providing O(1) time complexity for access.
+        - Easy to traverse: Arrays can be easily traversed using loops.
+        - Memory efficiency: Arrays have a low memory overhead compared to other data structures like linked lists.
+
+    Disadvantages
+        - Fixed size: The size of an array cannot be changed once it is created, which can lead to wasted memory or insufficient space.
+        - Insertion and deletion: Inserting or deleting elements can be inefficient, as it may require shifting elements.
+        - Homogeneous elements: Arrays can only store elements of the same data type, which can be limiting in some cases.
