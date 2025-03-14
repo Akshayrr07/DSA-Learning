@@ -1,0 +1,31 @@
+Stack
+
+Definition:
+A stack is a linear data structure that follows the Last In, First Out (LIFO) principle. This means that the last element added to the stack is the first one to be removed.
+
+Examples:
+1. Undo functionality in text editors.
+2. Browser backtracking (back button).
+3. Expression evaluation in programming.
+
+Approach:
+- Push: Add an element to the top of the stack.
+- Pop: Remove the top element from the stack.
+- Peek/Top: View the top element without removing it.
+- IsEmpty: Check if the stack is empty.
+
+Features:
+1. Operates on LIFO principle.
+2. Can be implemented using arrays or linked lists.
+3. Simple and efficient for certain use cases.
+
+Advantages:
+1. Easy to implement.
+2. Efficient for managing function calls, recursion, and temporary data storage.
+3. Useful in algorithms like Depth First Search (DFS).
+
+Operations:
+1. Push: Insert an element.
+2. Pop: Remove the top element.
+3. Peek: Retrieve the top element without removing it.
+4. Size: Get the number of elements in the stack.

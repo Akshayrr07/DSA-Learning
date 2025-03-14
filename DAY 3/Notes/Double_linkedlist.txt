@@ -1,0 +1,39 @@
+Double Linked List
+
+Definition:
+A double linked list is a type of linked list in which each node contains three parts:
+1. Data: The actual data stored in the node.
+2. Pointer to the next node in the sequence.
+3. Pointer to the previous node in the sequence.
+
+Structure:
+Each node in a double linked list has the following structure:
+- Data
+- Next pointer (points to the next node)
+- Previous pointer (points to the previous node)
+
+Operations:
+1. Insertion:
+    - At the beginning
+    - At the end
+    - At a specific position
+2. Deletion:
+    - From the beginning
+    - From the end
+    - From a specific position
+3. Traversal:
+    - Forward traversal
+    - Backward traversal
+4. Searching:
+    - Locate a specific element in the list.
+
+Example of Operations:
+- Insert a node with value 10 at the beginning.
+- Delete the last node in the list.
+- Traverse the list forward to display all elements.
+
+Traversals:
+1. Forward Traversal:
+    Start from the head node and move to the next node until the end of the list.
+2. Backward Traversal:
+    Start from the tail node and move to the previous node until the beginning of the list.
