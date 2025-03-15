@@ -1,28 +1,27 @@
-def infix_to_postfix(expression):
-    precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '(': 0}
-    output = []
-    operators = []
+def infix_to_postfix(e):
+    prec = {'+': 1, '-': 1, '*': 2, '/': 2, '(': 0}
+    result = ""
+    ops = []
     
-    for token in expression:
-        if token.isalnum():
-            output.append(token)
-        elif token == '(':
-            operators.append(token)
-        elif token == ')':
-            while operators and operators[-1] != '(':
-                output.append(operators.pop())
-            operators.pop()
+    for i in e:
+        if i.isalnum():
+            result+=i
+        elif i == '(':
+            ops.append(i)
+        elif i == ')':
+            while ops and ops[-1] != '(':
+                result+=ops.pop()
+            ops.pop()
         else:
-            while operators and precedence[operators[-1]] >= precedence[token]:
-                output.append(operators.pop())
-            operators.append(token)
-        
-        while operators:
-            output.append(operators.pop())
-        
-        return "".join(output)
+            while ops and prec[ops[-1]] >= prec[i]:
+                result+=ops.pop()
+            ops.append(i)
+    
+    while ops:
+        result+=ops.pop()
+    
+    return result
 
 
-    if __name__ == "__main__":
-        infix_expr = input().strip()
-        print(infix_to_postfix(infix_expr))
+i= input().strip()
+print(infix_to_postfix(i))
