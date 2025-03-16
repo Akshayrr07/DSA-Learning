@@ -1,0 +1,26 @@
+Binary Tree
+
+Definition:
+A binary tree is a hierarchical data structure in which each node has at most two children, referred to as the left child and the right child.
+
+Example:
+        1
+       / \
+      2   3
+     / \
+    4   5
+
+Operations:
+1. Insertion: Add a node to the tree.
+2. Deletion: Remove a node from the tree.
+3. Traversal: Visit all nodes in a specific order (e.g., Inorder, Preorder, Postorder).
+4. Search: Find a specific node in the tree.
+
+Height:
+The height of a binary tree is the number of edges on the longest path from the root to a leaf node.
+
+Depth:
+The depth of a node is the number of edges from the root to that node.
+
+Diameter:
+The diameter of a binary tree is the length of the longest path between any two nodes in the tree. This path may or may not pass through the root.

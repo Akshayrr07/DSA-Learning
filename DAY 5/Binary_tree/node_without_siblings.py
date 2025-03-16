@@ -36,8 +36,6 @@ class BinaryTree:
         queue = [root]
         while queue:
             current = queue.pop(0)
-
-            # Check for nodes without siblings
             if current.left and not current.right:
                 print(current.left.data, end=' ')
             elif current.right and not current.left:

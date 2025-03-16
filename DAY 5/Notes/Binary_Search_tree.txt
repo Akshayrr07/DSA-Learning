@@ -1,0 +1,39 @@
+Binary Search Tree (BST)
+========================
+
+Definition:
+------------
+A Binary Search Tree (BST) is a binary tree where each node has at most two children, and the following properties hold:
+1. The left subtree of a node contains only nodes with keys less than the node's key.
+2. The right subtree of a node contains only nodes with keys greater than the node's key.
+3. Both the left and right subtrees must also be binary search trees.
+
+Examples:
+----------
+Example 1:
+        8
+       / \
+      3   10
+     / \    \
+    1   6    14
+       / \   /
+      4   7 13
+
+Example 2:
+        15
+       /  \
+      10   20
+     / \   / \
+    8  12 17 25
+
+Operations:
+------------
+1. **Search**: Find whether a key exists in the BST.
+2. **Insert**: Add a new key to the BST while maintaining its properties.
+3. **Delete**: Remove a key from the BST and restructure it to maintain its properties.
+4. **Traversal**:
+   - In-order Traversal: Left -> Root -> Right (sorted order for BST).
+   - Pre-order Traversal: Root -> Left -> Right.
+   - Post-order Traversal: Left -> Right -> Root.
+5. **Find Minimum/Maximum**: Locate the smallest or largest key in the BST.
+6. **Find Successor/Predecessor**: Find the next or previous key in sorted order.
