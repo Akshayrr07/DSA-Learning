@@ -1,0 +1,30 @@
+Queue
+------
+
+Definition:
+A queue is a linear data structure that follows the First In First Out (FIFO) principle, where the element added first is removed first.
+
+Operations:
+1. Enqueue - Adding an element to the rear of the queue.
+2. Dequeue - Removing an element from the front of the queue.
+3. Peek/Front - Viewing the front element without removing it.
+4. IsEmpty - Checking if the queue is empty.
+5. IsFull - Checking if the queue is full (in case of a bounded queue).
+
+Applications:
+1. Managing requests in a printer queue.
+2. Handling processes in CPU scheduling.
+3. Breadth-First Search (BFS) in graph traversal.
+4. Data buffering (e.g., IO Buffers, Network Buffers).
+5. Call center systems to manage customer service requests.
+
+Examples:
+1. Queue of people waiting in line.
+2. Task scheduling in operating systems.
+3. Message queues in distributed systems.
+
+Types:
+1. Simple Queue - Basic FIFO queue.
+2. Circular Queue - Connects the rear to the front to utilize unused space.
+3. Priority Queue - Elements are dequeued based on priority, not just FIFO.
+4. Double-Ended Queue (Deque) - Allows insertion and deletion from both ends.

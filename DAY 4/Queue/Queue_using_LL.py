@@ -20,7 +20,7 @@ class LinkedListQueue:
 
     def dequeue(self):
         if self.head is None: 
-            return "Queue is empty"
+            return -1
         temp = self.head
         self.head = self.head.next
         if self.head is None: 
@@ -30,18 +30,21 @@ class LinkedListQueue:
 
     def front(self):
         if self.head is None:
-            return "Queue is empty"
+            return -1
         return self.head.data
 
     def get_size(self):
         return self.size
 
     def is_empty(self):
-        return self.head is None
+        if self.head is None:
+            return True
+        else:
+            return False
 
     def print_queue(self):
         if self.head is None:
-            print("Queue is empty")
+            return -1
         else:
             temp = self.head
             while temp is not None:
@@ -49,19 +52,20 @@ class LinkedListQueue:
                 temp = temp.next
             print()
 
-n = int(input())
 queue = LinkedListQueue()
-for _ in range(n):
-    query = list(map(int, input().split()))
-    if query[0] == 1:
-        queue.enqueue(query[1])
-    elif query[0] == 2:
-        print(queue.dequeue())
-    elif query[0] == 3:
-        print(queue.front())
-    elif query[0] == 4:
-        print(queue.get_size())
-    elif query[0] == 5:
-        print(queue.is_empty())
-    else:
-        queue.print_queue()
+result = []
+
+q = int(input())
+for _ in range(q):
+    query_type = int(input())
+    if query_type == 1:  
+        value = int(input())
+        queue.enqueue(value)
+    elif query_type == 2:  
+        result.append(str(queue.dequeue()))
+    elif query_type == 3: 
+        result.append(str(queue.front()))
+    elif query_type == 4:  
+        result.append(str(queue.get_size()))
+    elif query_type == 5:
+        result.append("true" if queue.is_empty() else "false")
