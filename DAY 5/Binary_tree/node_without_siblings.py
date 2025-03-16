@@ -24,24 +24,29 @@ class BinaryTree:
                 queue.append(current.left)
             i += 1
 
-
             if i < len(data_list) and data_list[i] != -1:
                 current.right = Node(data_list[i])
                 queue.append(current.right)
             i += 1
-    
-    def without_siblings(self,root):
-        if root is None:
-            return False
-        if root.left is not None and root.right is not None:
-            return False
-        if root.left is not None:
-            print(root.left.data,end=" ")
-        if root.right is not None:
-            print(root.right.data,end=" ")
-        self.is_without_siblings(root.left) 
-        self.is_without_siblings(root.right)
-    
+
+    def without_siblings(self, root):
+        if not root:
+            return
+
+        queue = [root]
+        while queue:
+            current = queue.pop(0)
+
+            # Check for nodes without siblings
+            if current.left and not current.right:
+                print(current.left.data, end=' ')
+            elif current.right and not current.left:
+                print(current.right.data, end=' ')
+            if current.left:
+                queue.append(current.left)
+            if current.right:
+                queue.append(current.right)
+
 
 data = list(map(int, input().split()))
 tree = BinaryTree()
