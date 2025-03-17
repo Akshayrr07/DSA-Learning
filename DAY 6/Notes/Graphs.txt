@@ -1,0 +1,23 @@
+Graphs
+    Definition:
+        A graph is a non-linear data structure consisting of nodes or vertices connected by edges.
+        Each node may have multiple edges connecting it to other nodes.
+    Examples:
+        - Social networks
+        - Web graphs
+        - Traffic networks
+        - Computer networks
+        - Molecular structures
+        - Gene expression networks
+    Operations:
+        - Traversal: Visit all nodes in a graph, following a specific order.
+        - Search: Find a path between two nodes in a graph.
+        - Shortest Path: Find the minimum-weight path between two nodes in a weighted graph.
+        - Minimum Spanning Tree: Find the minimum-weight subgraph that connects all nodes in a weighted graph.
+    Types:
+        - Undirected Graphs: Edges are bidirectional and have no direction.
+        - Directed Graphs (Digraphs): Edges have direction and represent a one-way relationship.
+        - Weighted Graphs: Each edge has a weight or label associated with it.
+        - Unweighted Graphs: Edges do not have weights or labels.
+        - Cyclic Graphs: Contains at least one cycle.
+        - Acyclic Graphs (DAGs): Does not contain any cycles.
