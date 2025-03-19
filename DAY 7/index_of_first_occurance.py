@@ -5,3 +5,4 @@ class Solution:
             if needle == haystack[i:i+n]:
                 return i
         return -1
+ 

@@ -1,0 +1,17 @@
+Greedy Approach
+    Definition:
+        The greedy approach is an algorithmic paradigm that builds up a solution piece by piece, always choosing the next piece that offers the most immediate benefit or optimal solution at that moment. It does not reconsider the choices made previously.
+
+    Key Characteristics:
+        - Greedy choice property: A global optimal solution can be arrived at by choosing a local optimal solution.
+        - Optimal substructure: A problem exhibits optimal substructure if an optimal solution to the problem contains optimal solutions to its subproblems.
+
+    Examples:
+        1. Activity Selection Problem:
+            - Select the maximum number of activities that don't overlap.
+        2. Fractional Knapsack Problem:
+            - Maximize the total value in the knapsack by taking fractions of items.
+        3. Huffman Encoding:
+            - Build an optimal prefix code for data compression.
+        4. Dijkstra's Algorithm:
+            - Find the shortest path in a graph with non-negative weights.
