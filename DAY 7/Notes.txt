@@ -1,0 +1,41 @@
+Time Complexity:
+----------------
+Definition:
+Time complexity refers to the computational complexity that describes the amount of time it takes to run an algorithm as a function of the length of the input.
+
+Algorithm:
+1. Analyze the algorithm step by step.
+2. Count the number of basic operations performed.
+3. Express the result as a function of the input size (n).
+
+Examples and Cases:
+- Linear Search: O(n)
+    - Best Case: O(1) (element found at the beginning)
+    - Worst Case: O(n) (element not found or at the end)
+- Binary Search: O(log n)
+    - Best Case: O(1) (element found at the middle)
+    - Worst Case: O(log n) (element not found or at the extremes)   
+- Bubble Sort: O(n^2)
+    - Best Case: O(n) (already sorted array)
+    - Worst Case: O(n^2) (reverse sorted array)
+
+Space Complexity:
+-----------------
+Definition:
+Space complexity refers to the amount of memory space required by an algorithm to execute as a function of the length of the input.
+
+Algorithm:
+1. Calculate the memory required for variables.
+2. Include memory for input data and auxiliary space.
+3. Express the result as a function of the input size (n).
+
+Examples and Cases:
+- Recursive Fibonacci: O(n) (due to stack space)
+    - Best Case: O(n) (for n recursive calls)
+    - Worst Case: O(n) (same as best case, depends on input size)
+- Merge Sort: O(n) (auxiliary array)
+    - Best Case: O(n) (same auxiliary space for all cases)
+    - Worst Case: O(n) (same auxiliary space for all cases)
+- Insertion Sort: O(1) (in-place sorting)
+    - Best Case: O(1) (minimal auxiliary space)
+    - Worst Case: O(1) (same as best case, in-place sorting)

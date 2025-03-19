@@ -1,0 +1,53 @@
+Divide and Conquer
+------------------
+Definition:
+    A problem-solving technique that divides a problem into smaller sub-problems, solves them independently, and combines their solutions to solve the original problem.
+
+Applications:
+    - Sorting algorithms (e.g., Merge Sort, Quick Sort)
+    - Searching algorithms (e.g., Binary Search)
+    - Computational geometry problems
+    - Matrix multiplication
+
+Usage:
+    - Break the problem into smaller parts.
+    - Solve each part recursively or iteratively.
+    - Combine the results to form the final solution.
+
+Example Problems:
+    - Finding the maximum and minimum in an array
+    - Closest pair of points in a plane
+    - Strassen's matrix multiplication
+
+Illustration:
+    Example: Merge Sort
+    - Divide the array into two halves.
+    - Recursively sort each half.
+    - Merge the two sorted halves into a single sorted array.
+
+Dynamic Programming
+-------------------
+Definition:
+    A method for solving problems by breaking them down into simpler sub-problems, solving each sub-problem once, and storing their solutions to avoid redundant computations.
+
+Applications:
+    - Optimization problems (e.g., shortest path, knapsack problem)
+    - Sequence alignment in bioinformatics
+    - Game theory problems
+    - Fibonacci sequence computation
+
+Usage:
+    - Define the problem in terms of smaller sub-problems.
+    - Use a table to store solutions to sub-problems.
+    - Build the solution to the original problem using the stored results.
+
+Example Problems:
+    - Longest Common Subsequence (LCS)
+    - 0/1 Knapsack Problem
+    - Matrix Chain Multiplication
+    - Coin Change Problem
+
+Illustration:
+    Example: Fibonacci Sequence
+    - Store the results of previously computed Fibonacci numbers in a table.
+    - Use the stored results to compute the next Fibonacci number efficiently.
