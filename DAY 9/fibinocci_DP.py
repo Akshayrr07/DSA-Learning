@@ -6,6 +6,8 @@ def fibonacci(n):
     for i in range(2, n + 1):
         dp[i] = dp[i - 1] + dp[i - 2]
     
-    return dp
+    return dp[i]
 n = int(input("Enter the value of n: "))
 print(*fibonacci(n))
+# a,b =0,1 
+# a,b = b , a+b
