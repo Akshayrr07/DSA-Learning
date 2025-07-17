@@ -9,7 +9,7 @@
 - Recursion
 - Sorting, Searching
 - Linked Lists
-- Trees (Add this once pushed)
+- Trees
 
 ## 💡 Purpose
 This repo documents my DSA journey as I prepare for SDE roles at top product-based companies.
