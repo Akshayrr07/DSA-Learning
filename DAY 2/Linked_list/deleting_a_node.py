@@ -22,7 +22,7 @@ class LinkedList:
             print("List is empty")
             return
         
-        if index == 0:  # If deleting the head
+        if index == 0: 
             self.head = self.head.next
             return
         
@@ -35,7 +35,8 @@ class LinkedList:
                 return
             temp = temp.next
 
-        prev.next = temp.next  # Remove the node at given index
+        prev.next = temp.next  
+        
 
     def display(self):
         if self.head is None:
