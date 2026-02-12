@@ -18,7 +18,7 @@ This repo documents my DSA journey as I prepare for SDE roles at top product-bas
 - Python 3.x
 
 ## 📌 Usage
-Clone, navigate, run any `.py` file for hands-on logic.
+Clone, navigate, run any ".py" file for hands-on logic.
 
 ## 🚀 Contributions
 This is my personal DSA vault. PRs are welcome only for improvements or new logic.
