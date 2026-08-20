@@ -1,0 +1,8 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "dsa-learning-vault"
+pages_build_output_dir = "frontend/dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dsa-db"
+database_id = "f4272eff-ea37-473e-89d0-21926b3779cc"
