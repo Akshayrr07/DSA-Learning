@@ -1,0 +1,10 @@
+name = "dsa-learning-vault"
+compatibility_date = "2026-08-15"
+
+[assets]
+directory = "frontend/dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dsa-db"
+database_id = "f4272eff-ea37-473e-89d0-21926b3779cc"

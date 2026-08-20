@@ -1,0 +1,32 @@
+# Node dependencies and build
+node_modules/
+dist/
+build/
+.npm
+*.log
+
+# Python cache & virtualenv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+.pytest_cache/
+
+# Java compiled files
+*.class
+
+# C++ compiled files
+*.out
+*.o
+*.obj
+*.exe
+solution
+
+# IDEs & System
+.DS_Store
+.vscode/
+.idea/
+.gemini/
