@@ -1,6 +1,8 @@
-#:schema node_modules/wrangler/config-schema.json
 name = "dsa-learning-vault"
-pages_build_output_dir = "./dist"
+compatibility_date = "2026-08-15"
+
+[assets]
+directory = "./dist"
 
 [[d1_databases]]
 binding = "DB"
