@@ -4,8 +4,8 @@ pages_build_output_dir = "./dist"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "dsa-learning-db"
-database_id = "local-db-placeholder"
+database_name = "dsa-db"
+database_id = "f4272eff-ea37-473e-89d0-21926b3779cc"
 # For local dev, this local-db-placeholder is sufficient.
 # For production, Cloudflare Pages manages D1 bindings in the dashboard,
 # but having it here acts as configuration for CLI commands.

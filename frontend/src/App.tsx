@@ -275,12 +275,12 @@ function App() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <button 
                     className="user-profile-btn" 
-                    title={`Logged in as ${user.email}`}
+                    title={`Logged in as ${user?.email || 'User'}`}
                     style={{ cursor: 'default' }}
                   >
                     <User size={14} />
                     <span style={{ maxWidth: '120px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      {user.email.split('@')[0]}
+                      {user?.email ? user.email.split('@')[0] : 'User'}
                     </span>
                   </button>
                   <button 
