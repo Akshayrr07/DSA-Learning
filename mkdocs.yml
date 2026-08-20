@@ -3,8 +3,6 @@ site_description: A world-class multi-language Data Structures and Algorithms ro
 site_author: Akshay
 site_url: https://dsa-learning-vault.pages.dev  # Replace with your actual Cloudflare pages URL when deployed
 
-docs_dir: docs_build
-
 theme:
   name: material
   palette:
@@ -54,7 +52,7 @@ plugins:
   - search
 
 nav:
-  - 🌌 Master Roadmap: index.md
+  - 🌌 Master Roadmap: README.md
   - 📂 Curriculum Modules:
     - "00. Foundations & Complexity": 00-Foundations-and-Complexity/README.md
     - "01. Arrays & Strings": 01-Arrays-and-Strings/README.md
