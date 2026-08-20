@@ -10,19 +10,19 @@ Every topic contains clean, well-documented implementations across four primary 
 
 | Module | Core Topics Covered | Languages Available |
 | :--- | :--- | :--- |
-| **[00-Foundations-and-Complexity](./00-Foundations-and-Complexity)** | Big-O analysis, memory models, math basics, pattern printing. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[01-Arrays-and-Strings](./01-Arrays-and-Strings)** | 1D/2D arrays, matrix operations, two-pointers, sliding window. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[02-Linked-Lists](./02-Linked-Lists)** | Singly, Doubly, and Circular Linked Lists. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[03-Stacks-and-Queues](./03-Stacks-and-Queues)** | Stacks, Queues, Deques, Balanced parentheses. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[04-Trees-and-BST](./04-Trees-and-BST)** | Tree traversals (In/Pre/Post), Binary Search Trees. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[05-Heaps-and-Priority-Queues](./05-Heaps-and-Priority-Queues)** | Min/Max Heaps, Heapify, extraction. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[06-Hashing-and-Tries](./06-Hashing-and-Tries)** | Hash Maps, Hash Sets, Prefix Trie search. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[07-Graphs-and-Disjoint-Set](./07-Graphs-and-Disjoint-Set)** | Adjacency lists/matrices, BFS, DFS, Disjoint Set (DSU). | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[08-Sorting-and-Searching](./08-Sorting-and-Searching)** | Binary search, Merge Sort, Quick Sort, Bubble/Selection. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[09-Greedy-Algorithms](./09-Greedy-Algorithms)** | Fractional Knapsack, Activity Selection. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[10-Dynamic-Programming](./10-Dynamic-Programming)** | Overlapping subproblems, Memoization, Tabulation, LCS. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[11-Backtracking-and-Bit-Manipulation](./11-Backtracking-and-Bit-Manipulation)** | N-Queens, subsets generation, bitwise tricks. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
-| **[12-Advanced-Data-Structures](./12-Advanced-Data-Structures)** | Segment Trees, Fenwick Trees (BIT). | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[00-Foundations-and-Complexity](./00-Foundations-and-Complexity/README.md)** | Big-O analysis, memory models, math basics, pattern printing. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[01-Arrays-and-Strings](./01-Arrays-and-Strings/README.md)** | 1D/2D arrays, matrix operations, two-pointers, sliding window. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[02-Linked-Lists](./02-Linked-Lists/README.md)** | Singly, Doubly, and Circular Linked Lists. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[03-Stacks-and-Queues](./03-Stacks-and-Queues/README.md)** | Stacks, Queues, Deques, Balanced parentheses. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[04-Trees-and-BST](./04-Trees-and-BST/README.md)** | Tree traversals (In/Pre/Post), Binary Search Trees. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[05-Heaps-and-Priority-Queues](./05-Heaps-and-Priority-Queues/README.md)** | Min/Max Heaps, Heapify, extraction. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[06-Hashing-and-Tries](./06-Hashing-and-Tries/README.md)** | Hash Maps, Hash Sets, Prefix Trie search. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[07-Graphs-and-Disjoint-Set](./07-Graphs-and-Disjoint-Set/README.md)** | Adjacency lists/matrices, BFS, DFS, Disjoint Set (DSU). | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[08-Sorting-and-Searching](./08-Sorting-and-Searching/README.md)** | Binary search, Merge Sort, Quick Sort, Bubble/Selection. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[09-Greedy-Algorithms](./09-Greedy-Algorithms/README.md)** | Fractional Knapsack, Activity Selection. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[10-Dynamic-Programming](./10-Dynamic-Programming/README.md)** | Overlapping subproblems, Memoization, Tabulation, LCS. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[11-Backtracking-and-Bit-Manipulation](./11-Backtracking-and-Bit-Manipulation/README.md)** | N-Queens, subsets generation, bitwise tricks. | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
+| **[12-Advanced-Data-Structures](./12-Advanced-Data-Structures/README.md)** | Segment Trees, Fenwick Trees (BIT). | 🐍 Python, 🟦 C++, ☕ Java, 🟨 JS |
 
 ---
 
