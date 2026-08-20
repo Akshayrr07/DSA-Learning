@@ -1,0 +1,69 @@
+site_name: 🌌 DSA Learning Vault & Master Roadmap
+site_description: A world-class multi-language Data Structures and Algorithms roadmap and implementation vault.
+site_author: Akshay
+site_url: https://dsa-learning-vault.pages.dev  # Replace with your actual Cloudflare pages URL when deployed
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light/dark mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+
+nav:
+  - 🌌 Master Roadmap: README.md
+  - 📂 Curriculum Modules:
+    - "00. Foundations & Complexity": 00-Foundations-and-Complexity/README.md
+    - "01. Arrays & Strings": 01-Arrays-and-Strings/README.md
+    - "02. Linked Lists": 02-Linked-Lists/README.md
+    - "03. Stacks & Queues": 03-Stacks-and-Queues/README.md
+    - "04. Trees & BST": 04-Trees-and-BST/README.md
+    - "05. Heaps & Priority Queues": 05-Heaps-and-Priority-Queues/README.md
+    - "06. Hashing & Tries": 06-Hashing-and-Tries/README.md
+    - "07. Graphs & Disjoint Set": 07-Graphs-and-Disjoint-Set/README.md
+    - "08. Sorting & Searching": 08-Sorting-and-Searching/README.md
+    - "09. Greedy Algorithms": 09-Greedy-Algorithms/README.md
+    - "10. Dynamic Programming": 10-Dynamic-Programming/README.md
+    - "11. Backtracking & Bit Manipulation": 11-Backtracking-and-Bit-Manipulation/README.md
+    - "12. Advanced Data Structures": 12-Advanced-Data-Structures/README.md
