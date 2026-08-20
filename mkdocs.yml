@@ -2,10 +2,7 @@ site_name: 🌌 DSA Learning Vault & Master Roadmap
 site_description: A world-class multi-language Data Structures and Algorithms roadmap and implementation vault.
 site_author: Akshay
 site_url: https://dsa-learning-vault.pages.dev  # Replace with your actual Cloudflare pages URL when deployed
-
-docs_dir: docs_build
-hooks:
-  - hooks.py
+docs_dir: docs
 
 theme:
   name: material

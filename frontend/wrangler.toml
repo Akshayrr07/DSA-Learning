@@ -1,0 +1,11 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "dsa-learning-vault"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dsa-learning-db"
+database_id = "local-db-placeholder"
+# For local dev, this local-db-placeholder is sufficient.
+# For production, Cloudflare Pages manages D1 bindings in the dashboard,
+# but having it here acts as configuration for CLI commands.
