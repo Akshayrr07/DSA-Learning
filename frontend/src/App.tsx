@@ -9,7 +9,8 @@ import {
   Info, 
   GraduationCap,
   User,
-  LogOut
+  LogOut,
+  Loader2
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -158,13 +159,45 @@ function App() {
 
   const activeModule = dsaData.modules.find(m => m.id === selectedModuleId) || null;
 
+  // 1. Initial Session Verification Screen
+  if (authLoading) {
+    return (
+      <div className="auth-page-container" style={{ gap: '16px' }}>
+        <GraduationCap size={48} style={{ color: 'var(--primary)' }} />
+        <h2 style={{ fontSize: '22px', fontWeight: 800, color: '#fff', margin: 0 }}>DSA Learning</h2>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontSize: '14px' }}>
+          <Loader2 size={18} className="auth-spinner" style={{ color: 'var(--primary)' }} /> Verifying session...
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Mandatory Authentication Gate: User MUST log in or sign up before accessing the webpage
+  if (!user) {
+    return (
+      <div className="auth-page-container">
+        <div style={{ marginBottom: '24px', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '8px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            <GraduationCap size={40} style={{ color: 'var(--primary)' }} />
+            <h1 style={{ fontSize: '32px', fontWeight: 800, color: '#fff', margin: 0 }}>DSA</h1>
+          </div>
+          <p style={{ color: 'var(--text-muted)', fontSize: '14px', margin: 0, maxWidth: '400px' }}>
+            Interactive Multi-Language Algorithm Learning & Progress Tracker
+          </p>
+        </div>
+        <AuthModal isStandalone={true} />
+      </div>
+    );
+  }
+
+  // 3. User is authenticated -> Render full web application
   return (
     <div className="app-container">
       {/* Sidebar Navigation */}
       <aside className="sidebar">
         <div className="logo-section">
           <GraduationCap size={32} style={{ color: 'var(--primary)' }} />
-          <h2 className="logo-title">DSA Vault</h2>
+          <h2 className="logo-title">DSA</h2>
         </div>
 
         <nav className="sidebar-nav">
@@ -184,7 +217,7 @@ function App() {
             className={`sidebar-nav-btn ${activeView === 'about' ? 'active' : ''}`}
             onClick={() => setActiveView('about')}
           >
-            <Info size={18} /> About Vault
+            <Info size={18} /> About DSA
           </button>
         </nav>
 
@@ -242,12 +275,12 @@ function App() {
         <header className="dashboard-header">
           <div>
             <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--secondary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-              INTERACTIVE VAULT
+              INTERACTIVE DSA
             </span>
             <h2 style={{ fontSize: '24px', fontWeight: 800 }}>
               {activeView === 'roadmap' && "Curriculum Roadmap"}
               {activeView === 'simulator' && "Algorithm Visual Playground"}
-              {activeView === 'about' && "About Vault & Ecosystem"}
+              {activeView === 'about' && "About DSA & Ecosystem"}
               {activeView === 'module' && activeModule && activeModule.title}
             </h2>
           </div>
@@ -275,12 +308,12 @@ function App() {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <button 
                     className="user-profile-btn" 
-                    title={`Logged in as ${user?.email || 'User'}`}
+                    title={`Logged in as ${user?.username || user?.email || 'User'}`}
                     style={{ cursor: 'default' }}
                   >
                     <User size={14} />
                     <span style={{ maxWidth: '120px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                      {user?.email ? user.email.split('@')[0] : 'User'}
+                      {user?.username || (user?.email ? user.email.split('@')[0] : 'User')}
                     </span>
                   </button>
                   <button 
@@ -328,7 +361,7 @@ function App() {
               </ReactMarkdown>
             ) : (
               <div>
-                <h2>Multi-Language DSA Learning Vault</h2>
+                <h2>Multi-Language DSA Learning</h2>
                 <p>Welcome to your learning dashboard. Use the sidebar to navigate topics, run code simulations, and keep track of your curriculum progression.</p>
               </div>
             )}

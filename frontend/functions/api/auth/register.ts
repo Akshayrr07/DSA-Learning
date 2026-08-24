@@ -20,7 +20,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       });
     }
 
-    const { email, password } = body;
+    const { email, password, username } = body;
+    const cleanUsername = username?.trim() || email.split('@')[0];
 
     // Validate inputs
     if (!email || !password) {
@@ -92,7 +93,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         token,
         user: {
           id: newUser.id,
-          email: newUser.email
+          email: newUser.email,
+          username: cleanUsername
         }
       }),
       {
