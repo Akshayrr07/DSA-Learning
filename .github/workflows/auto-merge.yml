@@ -1,0 +1,43 @@
+name: Auto-Merge
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, labeled, unlabeled, reopened]
+  pull_request_review:
+    types: [submitted]
+
+permissions:
+  pull-requests: write
+  contents: write
+
+jobs:
+  auto-merge:
+    name: Manage Auto-Merge
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure Auto-Merge State
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          PR_NUMBER=${{ github.event.pull_request.number }}
+          IS_DRAFT=${{ github.event.pull_request.draft }}
+          
+          # Convert labels array into a space-separated string
+          LABELS='${{ join(github.event.pull_request.labels.*.name, ' ') }}'
+          
+          # Check for blocked labels (case-insensitive check)
+          HAS_BLOCKED_LABEL=false
+          if [[ " $LABELS " =~ " do-not-merge " || " $LABELS " =~ " WIP " ]]; then
+            HAS_BLOCKED_LABEL=true
+          fi
+          
+          if [ "$IS_DRAFT" = "true" ] || [ "$HAS_BLOCKED_LABEL" = "true" ]; then
+            echo "PR is a draft or has a blocked label ('do-not-merge' or 'WIP'). Disabling auto-merge..."
+            gh pr merge "$PR_NUMBER" --disable-auto || echo "Auto-merge was not enabled or could not be disabled."
+          else
+            echo "PR is ready and has no blocked labels. Enabling auto-merge (squash)..."
+            gh pr merge "$PR_NUMBER" --auto --squash
+          fi
