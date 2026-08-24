@@ -85,3 +85,27 @@ Here is a quick cheat sheet for data structure operations:
 | **Binary Search Tree (BST)**| $O(\log N)$| $O(\log N)$| $O(\log N)$| $O(\log N)$| $O(N)$ |
 | **Min/Max Heap** | - | $O(N)$ | $O(\log N)$| $O(\log N)$| $O(N)$ |
 | **Hash Table** | - | $O(1)$ | $O(1)$ | $O(1)$ | $O(N)$ |
+
+---
+
+## 🤖 AI Agent Orchestration & Collaboration
+
+This repository features a standardized agent orchestration framework that guides AI coding agents (such as Google Antigravity, Claude Code, etc.) to collaborate, build, test, and audit features safely.
+
+### 🧩 Sub-Agent Matrix
+Specialized sub-agent roles (Product Architect, Frontend, API, Backend, Testing, DevOps, Docs, and Audit) are defined in [AGENTS.md](./AGENTS.md). Refer to this file to check how roles hand off tasks to one another.
+
+### 🛡️ Operating Rules & Guardrails
+All agents must adhere to the non-negotiable safety guardrails (including restrictions on D1 database writes, secrets containment, and git commit/push actions) specified in:
+*   [RULES.md](./RULES.md) (Global Markdown reference)
+*   [.agents/rules/rules.md](./.agents/rules/rules.md) (Antigravity-compatible rules config)
+
+### 🏃 Workflow Runbooks (Skills)
+Specialized step-by-step procedures are defined under [.agents/skills/](./.agents/skills/) (with markdown references under [skills/](./skills/)) to ensure high-fidelity delivery:
+*   **[Feature Development](./.agents/skills/feature-development/SKILL.md)**: Follows the `research → plan → confirm → develop → test` pipeline.
+*   **[Context & Research](./.agents/skills/research/SKILL.md)**: Guides dependency audits, UI component scans, and API maps.
+*   **[Bug Sweep & Fix](./.agents/skills/bug-fix/SKILL.md)**: Sweeps bugs using up to 4 parallel sub-agents (Frontend, API, DB, DevOps) to isolate issues.
+*   **[Testing & Quality Verification](./.agents/skills/testing/SKILL.md)**: Details compilation checks, oxlint runs, and browser checks.
+
+*How to Use:* When prompting an AI agent, instruct it to load the relevant workflow (e.g., *"Activate the `bug-fix` skill to investigate this error"* or *"Follow the `feature-development` runbook to add this view"*).
+
