@@ -30,3 +30,7 @@ solution
 .vscode/
 .idea/
 .gemini/
+
+# Cloudflare wrangler
+.wrangler/
+
