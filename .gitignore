@@ -31,6 +31,4 @@ solution
 .idea/
 .gemini/
 
-# Cloudflare wrangler
-.wrangler/
-
+doc/
