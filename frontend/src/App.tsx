@@ -9,7 +9,9 @@ import {
   Info, 
   GraduationCap,
   User,
-  LogOut
+  LogOut,
+  Code2,
+  History
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -21,6 +23,13 @@ import { ModuleDetail } from './components/ModuleDetail';
 import { AlgorithmSimulator } from './components/AlgorithmSimulator';
 import { AuthModal } from './components/AuthModal';
 import { useAuth } from './context/AuthContext';
+
+// Import our new competitive programming components
+import { ProblemArena } from './components/ProblemArena';
+import { Workspace } from './components/Workspace';
+import { Profile } from './components/Profile';
+import { SubmissionsList } from './components/SubmissionsList';
+import './practice.css';
 
 // Import our parsed static JSON dataset
 import dsaDataRaw from './data/dsa-data.json';
@@ -52,8 +61,9 @@ interface DsaDataset {
 const dsaData = dsaDataRaw as unknown as DsaDataset;
 
 function App() {
-  const [activeView, setActiveView] = useState<'roadmap' | 'simulator' | 'about' | 'module'>('roadmap');
+  const [activeView, setActiveView] = useState<'roadmap' | 'simulator' | 'about' | 'module' | 'practice' | 'workspace' | 'submissions' | 'profile'>('roadmap');
   const [selectedModuleId, setSelectedModuleId] = useState<string | null>(null);
+  const [selectedProblemSlug, setSelectedProblemSlug] = useState<string | null>(null);
   const [completedModules, setCompletedModules] = useState<string[]>([]);
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
@@ -181,6 +191,24 @@ function App() {
             <Gamepad2 size={18} /> Concept Simulator
           </button>
           <button 
+            className={`sidebar-nav-btn ${activeView === 'practice' || activeView === 'workspace' ? 'active' : ''}`}
+            onClick={() => setActiveView('practice')}
+          >
+            <Code2 size={18} /> Practice Arena
+          </button>
+          <button 
+            className={`sidebar-nav-btn ${activeView === 'submissions' ? 'active' : ''}`}
+            onClick={() => setActiveView('submissions')}
+          >
+            <History size={18} /> My Submissions
+          </button>
+          <button 
+            className={`sidebar-nav-btn ${activeView === 'profile' ? 'active' : ''}`}
+            onClick={() => setActiveView('profile')}
+          >
+            <User size={18} /> User Profile
+          </button>
+          <button 
             className={`sidebar-nav-btn ${activeView === 'about' ? 'active' : ''}`}
             onClick={() => setActiveView('about')}
           >
@@ -247,6 +275,10 @@ function App() {
             <h2 style={{ fontSize: '24px', fontWeight: 800 }}>
               {activeView === 'roadmap' && "Curriculum Roadmap"}
               {activeView === 'simulator' && "Algorithm Visual Playground"}
+              {activeView === 'practice' && "Coding Practice Arena"}
+              {activeView === 'workspace' && "Problem Solving Arena"}
+              {activeView === 'submissions' && "My Submission Logs"}
+              {activeView === 'profile' && "User Profile Dashboard"}
               {activeView === 'about' && "About Vault & Ecosystem"}
               {activeView === 'module' && activeModule && activeModule.title}
             </h2>
@@ -318,6 +350,35 @@ function App() {
 
         {activeView === 'simulator' && (
           <AlgorithmSimulator />
+        )}
+
+        {activeView === 'practice' && (
+          <ProblemArena 
+            onSelectProblem={(slug) => {
+              setSelectedProblemSlug(slug);
+              setActiveView('workspace');
+            }}
+          />
+        )}
+
+        {activeView === 'workspace' && selectedProblemSlug && (
+          <Workspace 
+            problemSlug={selectedProblemSlug}
+            onBack={() => setActiveView('practice')}
+          />
+        )}
+
+        {activeView === 'submissions' && (
+          <SubmissionsList />
+        )}
+
+        {activeView === 'profile' && (
+          <Profile 
+            onSelectProblem={(slug) => {
+              setSelectedProblemSlug(slug);
+              setActiveView('workspace');
+            }}
+          />
         )}
 
         {activeView === 'about' && (
